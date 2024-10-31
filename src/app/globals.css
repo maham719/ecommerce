@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+.list li {
+  color: rgb(86, 85, 85);
+}
+.list li:hover{
+  color:black ;
+cursor: pointer;
+}
+.list li:active{
+  color: black;
+}
+.banner{
+  background-image: linear-gradient(to right, #211c24, #211c24, #211c24, #211c24, #211c24);
+  color: white;
+}
+.grid-layout{
+  background-color: blue;
+  min-height:400px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+@media screen and (width < 900px) and (width > 200px) {
+  .banner-sub{
+    flex-direction: column;
+    width:screen;
+
+  }
+  .banner{
+    width:screen;
+  }
+  .banner-text{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid-layout{
+ 
+    grid-template-columns: repeat(1,1fr);
+  }
+  .categories {
+    overflow-y:auto ;
+  }
+
+  .area1-sub{
+    width: screen;
+  }
+  .area1-text{
+    width: 50%;
+  }
+}
